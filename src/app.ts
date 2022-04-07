@@ -50,8 +50,8 @@ export default class AlarmTimer {
 
 	// Increment to the counter (in seconds) when clicked
 	private readonly increment: number;
-	private readonly maxVolume = 0;
-	private readonly volumeIncrementPercent: number = 0.0;
+	private readonly maxVolume = 100;
+	private readonly volumeIncrementPercent: number = 1.0;
 	private readonly viewableByModsOnly: boolean;
 	private readonly pauseOnly: boolean;
 
