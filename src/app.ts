@@ -130,9 +130,9 @@ export default class AlarmTimer {
 		this.context.onUserJoined((user) => this.userJoined(user));
 		this.context.onUserLeft((user) => this.userLeft(user));	
 		let alarmSoundUri = decodeURIComponent(this.alarmSoundPath);
-		if( !alarmSoundUri.startsWith("http://") && !alarmSoundUri.startsWith("https://") ) {
+		/*if( !alarmSoundUri.startsWith("http://") && !alarmSoundUri.startsWith("https://") ) {
 			alarmSoundUri = `${this.baseUrl}/${this.alarmSoundPath}`;
-		}
+		}*/
 		this.alarmSound = this.assets.createSound(
 			'alarmSound',
 			{ uri: alarmSoundUri });
