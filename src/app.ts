@@ -72,7 +72,7 @@ export default class AlarmTimer {
 	private materialTimer: MRE.Asset;
 
 	constructor(private context: MRE.Context, private params: MRE.ParameterSet, private baseUrl: string) {
-		this.initialTimerCount = parseInt(getParameterLastValue(params, 'c', '300'));
+		this.initialTimerCount = parseInt(getParameterLastValue(params, 'c', '10'));
 		this.increment = parseInt(getParameterLastValue(params, 'i', '60'));
 		this.viewableByModsOnly = getBooleanOption(params, 'mo', false);
 		this.alarmSoundPath = getParameterLastValue(params, 'as', 'alarm.ogg');
