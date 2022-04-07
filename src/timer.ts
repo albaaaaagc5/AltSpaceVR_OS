@@ -46,20 +46,26 @@ export class Timer {
     
   
 
+    isTimeOver: boolean = false;
+
     private setTimer = () => {
         this.countdownUpdater = setInterval(() =>  {
             if (this.count > 0) {
                 this.count--;
                 this.updateValue();
             } else {
+                if(this.isTimeOver == false){
+                this.isTimeOver = true;    
                 this.pause();
                 this.onZeroReached();
+
+                }
+
             }
         }, 1000);
 
         this.updateValue();
     }
-
 
 
     private updateValue = () => {
