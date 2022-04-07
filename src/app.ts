@@ -75,7 +75,7 @@ export default class AlarmTimer {
 		this.initialTimerCount = parseInt(getParameterLastValue(params, 'c', '10'));
 		this.increment = parseInt(getParameterLastValue(params, 'i', '60'));
 		this.viewableByModsOnly = getBooleanOption(params, 'mo', false);
-		this.alarmSoundPath = getParameterLastValue(params, 'as', 'alarm.ogg');
+		this.alarmSoundPath = getParameterLastValue(params, 'as', '../alarm.ogg');
 		this.pauseOnly = getBooleanOption(params, 'p', false);
 		this.audioOptions = this.getAudioOptions(params);
 		this.soundPlaying = new PlayingMedia();
